@@ -343,6 +343,6 @@ end
 
 -- On startup instead of on playerctl object init to make it
 -- possible to have more than one of these running
-awful.spawn.with_shell("killall playerctl")
+awful.spawn.with_shell("killall playerctl &> /dev/null")
 
 return setmetatable(playerctl, playerctl.mt)
